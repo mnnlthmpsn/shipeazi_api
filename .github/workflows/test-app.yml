@@ -1,9 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-env:
-  DATABASE_URL: postgres://wxulabascxrvwu:4410f579c6d53359fe9bff37fc539042fc98682c4084d595e8aa274bfbf86641@ec2-3-223-169-166.compute-1.amazonaws.com:5432/d2ntfdv5utlfpm
-  
+
 name: Shipeazi CI workflow
 
 on:
