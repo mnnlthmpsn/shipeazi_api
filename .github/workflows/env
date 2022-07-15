@@ -1,1 +1,2 @@
 FLASK_ENV=testing
+DATABASE_URL=somedbhere
