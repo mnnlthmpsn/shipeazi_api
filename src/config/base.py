@@ -9,7 +9,6 @@ class Config(object):
 
     # Enable protection against *Cross-site Request Forgery (CSRF)*
     CSRF_ENABLED = True
-    SQLALCHEMY_DATABASE_URI = os.environ["DATABASE_URL"]
 
     # Use a secure, unique and absolutely secret key for
     # signing the data.
