@@ -2,7 +2,6 @@ import os
 from src.config.testing import TestingConfig
 from src.config.production import ProductionConfig
 from src.config.development import DevelopmentConfig
-from src.config.base import Config
 
 
 def get_config(env):
@@ -10,7 +9,5 @@ def get_config(env):
         return DevelopmentConfig()
     elif env == "production":
         return ProductionConfig()
-    elif env == "testing":
-        return TestingConfig()
     else:
-        return Config()
+        return TestingConfig()
