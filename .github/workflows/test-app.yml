@@ -3,6 +3,7 @@
 
 env:
   FLASK_ENV: testing
+  DATABASE_URL: somehtinghere
 
 name: Shipeazi CI workflow
 
