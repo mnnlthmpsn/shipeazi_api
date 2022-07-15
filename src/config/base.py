@@ -7,12 +7,9 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
 
-    # Define the database - we are working with
-    # SQLite for this example
-    SQLALCHEMY_DATABASE_URI = os.environ["DATABASE_URL"]
-
     # Enable protection against *Cross-site Request Forgery (CSRF)*
     CSRF_ENABLED = True
+    SQLALCHEMY_DATABASE_URI = os.environ["DATABASE_URL"]
 
     # Use a secure, unique and absolutely secret key for
     # signing the data.
