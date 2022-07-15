@@ -9,7 +9,7 @@ class Config(object):
 
     # Define the database - we are working with
     # SQLite for this example
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@localhost:5432/shipeazi_db'
+    SQLALCHEMY_DATABASE_URI = os.environ["DATABASE_URL"]
 
     # Enable protection against *Cross-site Request Forgery (CSRF)*
     CSRF_ENABLED = True
