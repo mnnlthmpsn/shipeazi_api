@@ -7,10 +7,6 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
 
-    # Define the database - we are working with
-    # SQLite for this example
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@localhost:5432/shipeazi_db'
-
     # Enable protection against *Cross-site Request Forgery (CSRF)*
     CSRF_ENABLED = True
 
