@@ -28,18 +28,18 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="f1d38a8e-abb8-4a26-ab81-67c25c04c93b">
-      <console name="Connection" type="STANDARD" schema="main" session="Main" />
+    <connection id="064098c0-beea-4bce-942f-8092764d235b">
+      <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from entities;
+select * from subscribers;
+select * from move_categories;
+select * from move_bookings;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="f1d38a8e-abb8-4a26-ab81-67c25c04c93b" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="f1d38a8e-abb8-4a26-ab81-67c25c04c93b" dataset="main.subscriber" active-filter-id="" />
+    <connection id="064098c0-beea-4bce-942f-8092764d235b" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -70,7 +70,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="f1d38a8e-abb8-4a26-ab81-67c25c04c93b" active="true" signed="true">
+      <connection id="064098c0-beea-4bce-942f-8092764d235b" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />

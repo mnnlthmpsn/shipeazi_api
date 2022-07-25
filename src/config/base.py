@@ -6,7 +6,6 @@ class Config(object):
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
-    SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(BASE_DIR, "sqlite.db")
 
     # Enable protection against *Cross-site Request Forgery (CSRF)*
     CSRF_ENABLED = True
@@ -17,3 +16,5 @@ class Config(object):
 
     # Secret key for signing cookies
     SECRET_KEY = "secret"
+
+    BCRYPT_LOG_ROUNDS = 12
