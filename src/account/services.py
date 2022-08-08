@@ -28,3 +28,5 @@ class EntityService:
         else:
             return False if entity is None else True
 
+    def get_entity(self):
+        return self._entity

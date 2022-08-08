@@ -7,7 +7,7 @@ class EntityBodySchema(BaseModel):
     name: str
     phone: str
     email: EmailStr
-    is_business: bool
+    is_business: Optional[bool]
 
 
 class EntityResponseSchema(BaseModel):

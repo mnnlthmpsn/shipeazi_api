@@ -14,6 +14,7 @@ class GeneralErrorHandler:
     def throw_err(self):
 
         logging.warning(self.exception)
+        logging.warning(self.exception.__traceback__.tb_lineno)
 
         if type(self.exception) == IntegrityError:
             return {"message": f"{self.model} already exists"}, HttpStatus.INTEGRITY_ERROR

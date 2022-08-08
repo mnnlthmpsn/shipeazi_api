@@ -32,7 +32,8 @@
       <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from entities;
 select * from subscribers;
 select * from move_categories;
-select * from move_bookings;]]></console>
+select * from move_bookings;
+select * from freight_transport_bookings;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -40,6 +41,9 @@ select * from move_bookings;]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="064098c0-beea-4bce-942f-8092764d235b" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="064098c0-beea-4bce-942f-8092764d235b" dataset="main.freight_transport_bookings" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

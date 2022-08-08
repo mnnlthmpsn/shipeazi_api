@@ -1,21 +1,5 @@
 from src.base_model import BaseModel, db
-from src.utils import generate_order_id
-
-from .schemas.move_schema import MoveBookingBodySchema
-
-
-class MoveCategoryModel(BaseModel):
-    __tablename__ = 'move_categories'
-
-    move_type = db.Column(db.String(255), nullable=False, unique=True)
-    description = db.Column(db.Text(), nullable=False)
-
-    def __init__(self, move_category):
-        self.move_type = move_category["move_type"]
-        self.description = move_category["description"]
-
-    def __repr__(self):
-        return f"<MoveCategory {self.move_type}>"
+from src.moving.schemas import MoveBookingBodySchema
 
 
 class MoveBookingModel(BaseModel):
@@ -52,14 +36,3 @@ class MoveBookingModel(BaseModel):
 
     def __repr__(self):
         return f"<Move {self.entity_id} [Origin: {self.origin} - Destination: {self.destination}]>"
-
-
-class OrderModel(BaseModel):
-    __tablename__ = 'orders'
-
-    moving_book_id = db.Column(db.String(200), db.ForeignKey("move_bookings.uuid"), nullable=False)
-    order_id = db.Column(db.String(200), nullable=False, default=generate_order_id)
-    fulfilled = db.Column(db.Boolean(), nullable=False, default=False)
-
-    def __init__(self, booking_id: str):
-        self.moving_book_id = booking_id
