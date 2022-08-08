@@ -1,7 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
 from src.utils import generate_uuid
 
 db = SQLAlchemy()
+bcrypt = Bcrypt()
 
 
 class BaseModel(db.Model):
@@ -18,3 +20,7 @@ class BaseModel(db.Model):
         default=db.func.current_timestamp(),
         onupdate=db.func.current_timestamp(),
     )
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()

@@ -1,6 +1,8 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint
+from flask_pydantic import validate
 
 from .services import SubscriberService
+from .schema import EmailSchema
 
 # blueprint
 mailing = Blueprint('mailing', __name__, url_prefix='/mailing')
@@ -8,15 +10,6 @@ mailing = Blueprint('mailing', __name__, url_prefix='/mailing')
 
 # routes and functions
 @mailing.route('/subscribe', methods=['POST'])
-def subscribe():
-    try:
-        data = request.get_json()
-
-        subscriber_service = SubscriberService(data["recipient"])
-        subscriber_service.create_subscription()
-        return {"message": "Subscription added successfully"}
-
-    except Exception as err:
-        # log error
-        print(err)
-        return {"message": "An error occurred creating subscription"}, 500
+@validate()
+def subscribe(body: EmailSchema):
+    return SubscriberService(body).create_subscription()
